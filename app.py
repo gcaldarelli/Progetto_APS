@@ -282,7 +282,7 @@ def registra():
     # controllo anti sybil attack basato sul registro delle identita della pki
     # se la matricola possiede gia uno pseudonimo associato blocca la richiesta multipla.
     if matricola in ca_registry:
-        msg = f"Rilevato tentativo di richiesta multipla. Certificato già emesso for lo pseudonimo {ca_registry[matricola][:16]}..."
+        msg = f"Rilevato tentativo di richiesta multipla. Certificato già emesso per lo pseudonimo {ca_registry[matricola][:16]}..."
         log(f"[CA] Eccezione di sicurezza: {msg}")
         return _dashboard(email, password, matricola, error=msg)
 
